@@ -1,6 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import CadastarMissao from '../views/cadastros/CadastrarMissao.vue'
+import LoginView from '../views/LoginView.vue'
+import CadastrarMissao from '../views/cadastros/CadastrarMissao.vue'
+import CadastrarUsuario from '../views/cadastros/CadastrarUsuario.vue'
 
 const routes = [
   {
@@ -10,8 +12,18 @@ const routes = [
   },
   {
     path: '/cadastrar-missao',
-    name: 'cadastarMissao',
-    component: CadastarMissao
+    name: 'cadastrarMissao',
+    component: CadastrarMissao
+  },
+  {
+    path: '/cadastrar-usuario',
+    name: 'cadastrarUsuario',
+    component: CadastrarUsuario
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: LoginView
   },
   {
     path: '/about',

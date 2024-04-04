@@ -1,48 +1,117 @@
 <template>
  <HeaderComponent />
   <div class="cadastrarMissao">
-   <span class="title">Cadastrar Missão</span>
+   <span class="title">Cadastrar Usuário</span>
     <div class="container">
       <form class="formMission" @submit.prevent="submit">
-        <label class="textLabel">Quantidade de Servidor Envolvido:</label><br>
-        <b-form-input class="inputForm" min="0" v-model="mission.employeeNumber" type="number" placeholder="Inserir quantidade de Servidor Envolvido"></b-form-input>
 
-        <label class="textLabel">Selecionar Servidores:</label>
-        <b-form-select class="inputForm" v-model="mission.employeeSelected" :options="mission.federalEmployeeOptions"></b-form-select>  
-        
-        <label class="textLabel">Missão:</label><br>
-        <b-form-input class="inputForm" v-model="mission.missionName" placeholder="Inserir o nome da missão"></b-form-input>
-        
-        <label class="textLabel">Prioridade:</label>
-        <b-form-select class="inputForm" v-model="mission.priorityLevelSelected" :options="mission.priorityOptions"></b-form-select>  
-
-        <label class="textLabel">Data de Início:</label><br>
+        <label class="textLabel">Data:</label><br>
         <b-form-input class="inputForm" v-model="mission.valueDataStart" type="date"></b-form-input>
+
+      
         
-        <label class="textLabel">Data de Término:</label><br>
+        <label class="textLabel">SARAM:</label><br>
+        <b-form-input class="inputForm" v-model="mission.missionName" placeholder="Inserir o SARAM"></b-form-input>
+        
+        <label class="textLabel">POSTO/GRAD/NOME:</label><br>
+        <b-form-input class="inputForm" v-model="mission.missionName" placeholder="Inserir o POSTO/GRAD/Nome"></b-form-input>
+       
+
+        <label class="textLabel">CPF:</label><br>
+        <b-form-input class="inputForm" v-model="mission.missionName" placeholder="Inserir o número do CPF"></b-form-input>
+        
+        <label class="textLabel">BANCO:</label><br>
+        <b-form-input class="inputForm" v-model="mission.missionName" placeholder="Inserir o número do Banco"></b-form-input>
+        
+        <label class="textLabel">AGÊNCIA:</label><br>
+        <b-form-input class="inputForm" v-model="mission.missionName" placeholder="Inserir o número da Agência"></b-form-input>
+        
+        <label class="textLabel">CONTA:</label><br>
+        <b-form-input class="inputForm" v-model="mission.missionName" placeholder="Inserir o Email"></b-form-input>
+       
+        <label class="textLabel">Data:</label><br>
+        <b-form-input class="inputForm" v-model="mission.valueDataStart" type="date"></b-form-input>
+
+        <label class="textLabel">EMAIL:</label><br>
+        <b-form-input class="inputForm" v-model="mission.missionName" placeholder="Inserir o número da CONTA"></b-form-input>
+       
+        <label class="textLabel">Data de Nasciento:</label><br>
         <b-form-input class="inputForm" v-model="mission.valueDataEnd" type="date"></b-form-input>
-
-        <label class="textLabel">Quantidade de Diárias:</label><br>
-        <p>Calculando...</p><br>
         
-        <label class="textLabel">Selecionar Estado (UF):</label><br>
+        <p><strong>ENQUADRAMENTO LEGAL:</strong></p>
+        <p>Portaria n° 1347/GC4, de 03/09/2015 e Portaria nº 672/GC4, de 29/12/2023</p>
+   
+        
+        <label class="textLabel">IDENTIDADE:</label><br>
+        <b-form-input class="inputForm" v-model="mission.missionName" placeholder="Inserir o número de identidade"></b-form-input>
+        
+        <label class="textLabel">UNIDADE:</label><br>
+        <b-form-input class="inputForm" v-model="mission.missionName" placeholder="Inserir a unidade"></b-form-input>
+
+        <label class="textLabel">TELEFONE:</label><br>
+        <b-form-input class="inputForm" v-model="mission.missionName" placeholder="Inserir o número de telefone"></b-form-input>
+
+        <label class="textLabel">DOCUMENTOS QUE ORIGINARAM A MISSÃO:</label><br>
+        <b-form-input class="inputForm" v-model="mission.missionName" placeholder="Inserir o número de DOCUMENTOS QUE ORIGINARAM A MISSÃO:"></b-form-input>
+
+
+
+        <label class="textLabel">TIPO DE MISSÃO:</label><br>
         <b-form-select class="inputForm" v-model="mission.federalStateSelected" :options="mission.federalStateOptions"></b-form-select><br>
-        
-        <label class="textLabel">Selecionar Apoio:</label><br>
-        <b-form-checkbox-group
-        v-model="mission.supportSelected"
-        :options="mission.supportOptions"
-        class="mb-3 inputForm"
-        value-field="item"
-        text-field="name"
-        disabled-field="notEnabled"
-        ></b-form-checkbox-group>
+       
 
-        <label class="textLabel">Status da Missão:</label><br>
-        <b-form-select class="inputForm" v-model="mission.statusSelect" :options="mission.statusOptions"></b-form-select><br>
+        <label class="textLabel">EM PROVEITO:</label><br>
+        <b-form-input class="inputForm" v-model="mission.missionName" placeholder="Inserir o número de em proveito"></b-form-input>
 
-        <label class="textLabel">Valor Total da Missão:</label><br>
-        <p>Calculando...</p><br>
+
+        <div class="anexA">
+          <h1><strong>ANEXO A</strong></h1>
+          <h4><strong>INSTRUÇÕES PARA O PREENCHIMENTO DE ORDEM DE SERVIÇO</strong></h4>
+          <br>
+
+         <p class="textItemAnexA"> 1 - SARAM do proposto; </p>
+         <p class="textItemAnexA"> 2 - Posto ou Graduação do proposto; </p>
+         <p class="textItemAnexA"> 3 - CPF do proposto; </p>
+         <p class="textItemAnexA"> 4 - Banco; </p>
+         <p class="textItemAnexA"> 5 - Agência; </p>
+         <p class="textItemAnexA"> 6 - Conta Corrente; </p>
+         <p class="textItemAnexA"> 7 - E-mail (utilizar e-mail de internet); </p>
+         <p class="textItemAnexA"> 8 - Data de nascimento do proposto; </p>
+         <p class="textItemAnexA"> 9 - Serviço a realizar; </p>
+         <p class="textItemAnexA"> 10 - Não deve ser alterado o enquadramento legal;</p>
+         <p class="textItemAnexA"> 11 - Identidade do proposto; </p>
+         <p class="textItemAnexA"> 12 - Unidade do proposto; </p>
+         <p class="textItemAnexA"> 13 - Telefone; </p>
+         <p class="textItemAnexA"> 14 - Documentos que originaram a missão (deverão ser entregues impressos juntamente com a Ficha de Solicitação); </p>
+         <p class="textItemAnexA"> 15 - Tipo de Missão (administrativa ou operacional); </p>
+         <p class="textItemAnexA"> 16 - Preencher com a Unidade a ser beneficiada com a missão (Ex: ICEA, CIAAR, EEAR); </p>
+         <p class="textItemAnexA"> 17 - Local de realização do serviço (se for mais de um local discriminar); </p>
+         <p class="textItemAnexA"> 18 - Preencher com a data e hora do início previsto para o deslocamento do militar para o local da missão; </p>
+         <p class="textItemAnexA"> 19 - Preencher com a data e hora da chegada prevista ao local de origem, por término de missão; </p>
+         <p class="textItemAnexA"> 20 - Adicional de deslocamento - colocar sim ou não (não fará jus ao adicional quando o deslocamento for realizado em veículo particular ou com apoio de viatura oficial em toda a missão); </p>
+         <p class="textItemAnexA"> 21 - A ser preenchido pela Seção Administrativa; </p>
+         <p class="textItemAnexA"> 22 - Auxílio Transporte (colocar sim ou não); </p>
+         <p class="textItemAnexA"> 23 - Auxílio Alimentação (colocar sim ou não); </p>
+         <p class="textItemAnexA"> 24 - Não deve ser alterado; </p>
+         <p class="textItemAnexA"> 25 - Preencher com a localidade de partida/localidade de destino (em caso de necessidade de passagem aérea, a mesma deverá ser solicitada através da FISPA de Passagem); </p>
+         <p class="textItemAnexA"> 26 - Datas para compra das passagens; </p>
+         <p class="textItemAnexA"> 27 - Preencher com o horário específico do voo a qual deseja viajar (somente em missões que envolvam o acompanhamento de Oficiais Generais), justificando a autoridade a ser acompanhada no item nº 29; </p>
+         <p class="textItemAnexA"> 28 - Preencher com horário a ser utilizado como base do lastro de seis horas para compra de passagem, definido pelo DECEA, a fim de atender o princípio da economicidade; </p>
+         <p class="textItemAnexA"> 29 - Justificar a escolha do voo definido; </p>
+         <p class="textItemAnexA"> 30 - Justificar caso a missão envolva final de semana ou feriado, preenchimento obrigatório; </p>
+         <p class="textItemAnexA"> 31 - Justificar caso a solicitação seja com prazo inferior a vinte dias do início da viagem (caso a missão envolva aquisição de passagem aérea, o prazo para solicitação será de no mínimo 25 dias de antecedência); </p>
+         <p class="textItemAnexA"> 32 - Indicar em qual caixa deverá ser contabilizado os custos de diárias (a ser preenchido pelo CHEFE DE DIVISÃO que aprovar a missão). </p>
+         <p class="textItemAnexA"> 33 - Somente preencher se o crédito for proveniente de outra Unidade. </p>
+
+         <p class="textItemAnexA">*PROPOSTO: militar ou civil que realizará a missão.</p>
+
+        </div>
+
+
+
+
+
+
 
 
         <b-button class="btnSubmit" type="submit" @click="submit" variant="primary">Cadastrar</b-button>
@@ -274,12 +343,6 @@ body {
   padding: 0;
 }
 
-.title{
-  font-size: 3rem;
-  font-family: 'lato',sans-serif;
-  font-weight: 400;
-}
-
 .container {
   display: flex;
   text-align: left;
@@ -308,7 +371,22 @@ body {
   align-self: center;
   width: 100%;
 }
-
+.anexA{
+  width: 90%;
+  margin: 5%;
+  /* display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left; */
+}
+.textItemAnexA{
+  font-size: 1rem;
+  font-family: 'lato', sans-serif;
+  font-weight: 400;
+  word-break: normal;
+  line-height: 1.25rem;
+}
 
 </style>
 
